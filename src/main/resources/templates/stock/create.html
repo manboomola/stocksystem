@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/layout :: head('新規登録')">
+</head>
+
+<body>
+  <div th:replace="fragments/layout :: navbar"></div>
+
+  <div class="container-fluid">
+    <h5>新規登録</h5>
+    <hr>
+    <div class="row">
+      <div class="col-sm-12">
+        <form action="#" th:action="@{/stocks/create/}" th:object="${stock}" method="post">
+          <div class="form-group">
+            <label for="name">商品名 <span class="badge badge-danger">必須</span></label>
+            <input type="text" id="name" class="form-control" placeholder="(例) iPhone12Pro" th:field="*{name}" />
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">確定</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

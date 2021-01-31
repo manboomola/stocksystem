@@ -1,0 +1,20 @@
+spring:
+  datasource:
+
+    # PostgresのIPアドレス/ポート番号/DB名
+    url: jdbc:postgresql://localhost:5432/postgres
+
+    # Postgresのユーザ名
+    username: postgres
+
+    # Postgresのパスワード
+    password: postgres
+
+    # PostgresのJDBCドライバ
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+
+      # @Entityに対応するテーブルを常にdrop&createする。
+      ddl-auto: create-drop
