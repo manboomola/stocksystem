@@ -26,4 +26,11 @@ public class Stock {
   //商品名
   @NotBlank
   private String name;
+  
+  //数量
+  private int quantity;
+  
+  //商品情報
+  private String information;
+  
 }

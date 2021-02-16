@@ -31,10 +31,17 @@
                 <a th:text="${stock.name}"th:href="@{/stocks/{id}/update/(id=${stock.id})}">
                 </a>
               </td>
-              <td th:text="準備中">
+              
+              <td>
+                <a th:text="${stock.information}">
+                </a>
               </td>
-              <td th:text="準備中">
+              
+              <td>
+                <a th:text="${stock.quantity}">
+                </a>
               </td>
+              
               <td>
                 <a th:href="@{/stocks/{id}/delete/(id=${stock.id})}" onClick="return window.confirm('削除してよろしいですか？')">
                   <i class="far fa-trash-alt fa-lg" aria-hidden=”true”></i>
